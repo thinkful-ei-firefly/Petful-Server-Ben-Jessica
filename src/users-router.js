@@ -1,5 +1,4 @@
 const express = require('express');
-const cuid = require('cuid');
 const usersRouter = express.Router();
 const jsonParser = express.json();
 
@@ -12,8 +11,7 @@ usersRouter
     return res.status(200).json(catUsers);
   })
   .post(jsonParser, (req, res) => {
-    const { name } = req.body;
-    const id = cuid();
+    const { id, name } = req.body;
     const newUser = { id, name };
     catUserQueue.enqueue(newUser);
     return res.status(200).json(newUser);
@@ -26,8 +24,7 @@ usersRouter
     return res.status(200).json(dogUsers);
   })
   .post(jsonParser, (req, res) => {
-    const { name } = req.body;
-    const id = cuid();
+    const { id, name } = req.body;
     const newUser = { id, name };
     catUserQueue.enqueue(newUser);
     return res.status(200).json(newUser);
