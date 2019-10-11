@@ -14,4 +14,22 @@ usersRouter.route('/dogs').get((req, res) => {
   return res.status(200).json({ first, nextThree });
 });
 
+usersRouter.route('/cats/:user_id').get((req, res) => {
+  const length = catUserQueue.length();
+  const position = catUserQueue.placeInQueue(req.params.user_id);
+  if (!length || !position) {
+    return res.status(400);
+  }
+  return res.status(200).json({ length, position });
+});
+
+usersRouter.route('/dogs/:user_id').get((req, res) => {
+  const length = dogUserQueue.length();
+  const position = dogUserQueue.placeInQueue(req.params.user_id);
+  if (!length || !position) {
+    return res.status(400);
+  }
+  return res.status(200).json({ length, position });
+});
+
 module.exports = usersRouter;

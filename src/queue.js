@@ -60,6 +60,35 @@ class Queue {
     }
     return nextThree;
   }
+
+  length() {
+    let node = this.first;
+    let count = 0;
+    while (node !== null) {
+      count++;
+      node = node.next;
+    }
+    return count;
+  }
+
+  placeInQueue(id) {
+    if (!this.first) {
+      return;
+    } else if (this.first.value.id === id) {
+      return 1;
+    } else {
+      let node = this.first.next;
+      let position = 2;
+      while (node.value.id !== id && node.next !== null) {
+        position++;
+        node = node.next;
+      }
+      if (node.value.id === id) {
+        return position;
+      }
+      return 'User not found';
+    }
+  }
 }
 
 module.exports = Queue;
