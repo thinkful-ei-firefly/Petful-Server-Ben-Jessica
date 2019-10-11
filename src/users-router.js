@@ -26,7 +26,7 @@ usersRouter
   .post(jsonParser, (req, res) => {
     const { id, name } = req.body;
     const newUser = { id, name };
-    catUserQueue.enqueue(newUser);
+    dogUserQueue.enqueue(newUser);
     return res.status(200).json(newUser);
   });
 

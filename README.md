@@ -1,26 +1,22 @@
-# Express Boilerplate!
+# Petful API
 
-This is a boilerplate project used for starting new projects!
+Created by:
+Jessica Doyle
+Ben Rosen
 
-## How do set up?
+## Endpoints
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+The data in this API is implemented with a Queue. In addition to `enqueue()` and `dequeue()`, the Queue class has methods that can return the entire queue (`displayAll()`) or the next four items in the queue (`nextFour()`).
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+- /api/cats
 
-## Scripts
+`GET` requests will return the next four cats in the queue of cats for adoption.
+`DELETE` requests will enqueue the next cat in the queue of cats for adoption.
 
-Start the application `npm start`
+- /api/dogs
 
-Start nodemon for the application `npm run dev`
+`GET` requests will return the next four dogs in the queue of dogs for adoption.
+`DELETE` requests will enqueue the next dog in the queue of dog for adoption.
 
-Run the tests in watch mode `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+- /api/users/cats
+- /api/users/dogs
