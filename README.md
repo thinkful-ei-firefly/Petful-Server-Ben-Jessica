@@ -1,6 +1,6 @@
 # Petful API
 
-Created by:
+Created by:  
 Jessica Doyle  
 Ben Rosen
 
