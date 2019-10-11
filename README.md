@@ -1,8 +1,6 @@
 # Petful API
 
-Created by:  
-Jessica Doyle  
-Ben Rosen
+Created by: [Jessica Doyle](https://github.com/jedoyle6) and [Ben Rosen](https://github.com/tymbalodeon)
 
 This is the API for the Petful App:  
 Live Link: https://petful-client-ben-jessica.jessicaedoyle.now.sh/  
