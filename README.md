@@ -1,7 +1,7 @@
 # Petful API
 
 Created by:
-Jessica Doyle
+Jessica Doyle  
 Ben Rosen
 
 This is the API for the Petful App:
