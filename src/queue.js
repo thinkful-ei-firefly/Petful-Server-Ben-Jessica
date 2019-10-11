@@ -50,13 +50,15 @@ class Queue {
     return false;
   }
 
-  display() {
-    let curr = this.first;
-
-    while (curr !== null) {
-      console.log(curr.value);
+  nextThree() {
+    let curr = this.first.next;
+    const nextThree = [];
+    for (let i = 0; i < 3; i++) {
+      if (curr === null) return;
+      nextThree.push(curr.value);
       curr = curr.next;
     }
+    return nextThree;
   }
 }
 
