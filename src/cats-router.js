@@ -5,9 +5,8 @@ const { catQueue, catUserQueue } = require('./database');
 catsRouter
   .route('/')
   .get((req, res) => {
-    const first = catQueue.peek();
-    const nextThree = catQueue.nextThree();
-    return res.status(200).json({ first, nextThree });
+    const nextFour = catQueue.nextFour();
+    return res.status(200).json(nextFour);
   })
   .delete((req, res) => {
     if (!catQueue.peek() || !catUserQueue.peek()) {

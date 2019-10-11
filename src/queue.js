@@ -39,41 +39,47 @@ class Queue {
     return node.value;
   }
 
-  peek() {
-    return this.first.value;
-  }
+  // peek() {
+  //   return this.first.value;
+  // }
 
-  isEmpty() {
-    if (this.first === null) {
-      return true;
-    }
-    return false;
-  }
+  // isEmpty() {
+  //   if (this.first === null) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
   displayAll() {
-
-  }
-  
-  nextThree() {
-    let curr = this.first.next;
-    const nextThree = [];
-    for (let i = 0; i < 3; i++) {
-      if (curr === null) return;
-      nextThree.push(curr.value);
+    let curr = this.first;
+    const arr = [];
+    while (curr) {
+      arr.push(curr.value);
       curr = curr.next;
     }
-    return nextThree;
+    return arr;
   }
 
-  length() {
-    let node = this.first;
-    let count = 0;
-    while (node !== null) {
-      count++;
-      node = node.next;
+  nextFour() {
+    let curr = this.first;
+    const nextFour = [];
+    for (let i = 0; i < 4; i++) {
+      if (curr === null) return;
+      nextFour.push(curr.value);
+      curr = curr.next;
     }
-    return count;
+    return nextFour;
   }
+
+  // length() {
+  //   let node = this.first;
+  //   let count = 0;
+  //   while (node !== null) {
+  //     count++;
+  //     node = node.next;
+  //   }
+  //   return count;
+  // }
 
   // placeInQueue(id) {
   //   if (!this.first) {

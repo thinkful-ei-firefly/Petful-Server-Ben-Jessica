@@ -5,9 +5,8 @@ const { dogQueue, dogUserQueue } = require('./database');
 dogsRouter
   .route('/')
   .get((req, res) => {
-    const first = dogQueue.peek();
-    const nextThree = dogQueue.nextThree();
-    return res.status(200).json({ first, nextThree });
+    const nextFour = dogQueue.nextFour();
+    return res.status(200).json(nextFour);
   })
   .delete((req, res) => {
     if (!dogQueue.peek() || !dogUserQueue.peek()) {
