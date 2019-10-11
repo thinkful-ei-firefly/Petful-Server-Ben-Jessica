@@ -1,3 +1,5 @@
+const Queue = require('./queue');
+
 const cats = [
   {
     imageURL:
@@ -26,4 +28,28 @@ const dogs = [
   }
 ];
 
-module.exports = { cats, dogs };
+const catUsers = [
+  {
+    name: 'Jessica',
+    id: 1029840294582093847
+  }
+];
+
+const dogUsers = [
+  {
+    name: 'Ben',
+    id: 1029840294582093847
+  }
+];
+
+const catQueue = new Queue();
+const dogQueue = new Queue();
+const catUserQueue = new Queue();
+const dogUserQueue = new Queue();
+
+cats.forEach(cat => catQueue.enqueue(cat));
+dogs.forEach(dog => dogQueue.enqueue(dog));
+catUsers.forEach(user => catUserQueue.enqueue(user));
+dogUsers.forEach(user => dogUserQueue.enqueue(user));
+
+module.exports = { catQueue, dogQueue, catUserQueue, dogUserQueue };

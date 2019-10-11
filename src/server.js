@@ -4,8 +4,8 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const { CLIENT_ORIGIN, PORT, NODE_ENV } = require('./config');
 // const usersRouter = require('./users-router');
-const catsRouter = require('./cats-router');
-const dogsRouter = require('./dogs-router');
+const catsRouter = require('./cats/cats-router');
+const dogsRouter = require('./dogs/dogs-router');
 
 const app = express();
 

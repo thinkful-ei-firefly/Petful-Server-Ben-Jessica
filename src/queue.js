@@ -38,6 +38,26 @@ class Queue {
     }
     return node.value;
   }
+
+  peek() {
+    return this.first.value;
+  }
+
+  isEmpty() {
+    if (this.first === null) {
+      return true;
+    }
+    return false;
+  }
+
+  display() {
+    let curr = this.first;
+
+    while (curr !== null) {
+      console.log(curr.value);
+      curr = curr.next;
+    }
+  }
 }
 
 module.exports = Queue;
