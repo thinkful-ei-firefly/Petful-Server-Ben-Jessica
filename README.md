@@ -10,7 +10,7 @@ Repo:
 
 ## Endpoints
 
-The data in this API is implemented with a Queue. In addition to `enqueue()` and `dequeue()`, the Queue class has methods that can return the entire queue (`displayAll()`) or the next four items in the queue (`nextFour()`).
+The data in this API is implemented with a Queue. In addition to `enqueue()` and `dequeue()`, the Queue class has methods that can return the entire queue `displayAll()` or the next four items in the queue `nextFour()`.
 
 - /api/cats
 

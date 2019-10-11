@@ -39,9 +39,9 @@ class Queue {
     return node.value;
   }
 
-  // peek() {
-  //   return this.first.value;
-  // }
+  peek() {
+    return this.first.value;
+  }
 
   // isEmpty() {
   //   if (this.first === null) {
@@ -64,7 +64,7 @@ class Queue {
     let curr = this.first;
     const nextFour = [];
     for (let i = 0; i < 4; i++) {
-      if (curr === null) return;
+      if (curr === null) break;
       nextFour.push(curr.value);
       curr = curr.next;
     }
